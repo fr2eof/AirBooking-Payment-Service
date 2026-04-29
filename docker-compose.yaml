@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  postgres-payment:
+    image: postgres:17
+    container_name: postgres-payment
+    environment:
+      POSTGRES_DB: payment_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - payment-db-data:/var/lib/postgresql/data
+
+volumes:
+  payment-db-data:
