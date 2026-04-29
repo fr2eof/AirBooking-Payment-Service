@@ -5,4 +5,5 @@ import pet.payment.core.entity.PaymentEntity;
 
 
 public interface PaymentJpaRepository extends JpaRepository<PaymentEntity, Long> {
+    boolean existsByBookingId(Long bookingId);
 }
