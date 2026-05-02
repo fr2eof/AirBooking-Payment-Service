@@ -11,5 +11,5 @@ import lombok.ToString;
 @AllArgsConstructor
 public class PaymentCompletedEvent {
     private Long id;
-    private Long getBookingId;
+    private Long bookingId;
 }
